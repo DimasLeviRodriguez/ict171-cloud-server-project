@@ -2,244 +2,146 @@
 
 ## Student Information
 
-**Name:** Dimas Rodriguez
-**Student ID:** 36172107
-**Unit:** ICT171 Introduction to Server Environments and Architectures
-**University:** Murdoch University
+- **Name:** Dimas Rodriguez  
+- **Student ID:** 36172107  
+- **Unit:** ICT171 – Introduction to Server Environments and Architectures  
+- **University:** Murdoch University  
+- **Project Type:** Cloud Hosted Portfolio Website  
 
 ---
 
 # Project Overview
 
-This project involved designing, deploying, and managing a cloud-hosted Linux web server using Microsoft Azure. The website was developed as a personal portfolio while demonstrating practical cloud computing, Linux administration, networking, and web deployment skills.
+This project involved the deployment and management of a cloud-hosted Linux web server using Microsoft Azure.  
 
-The server is hosted on an Ubuntu Linux virtual machine running on Microsoft Azure. The website is publicly accessible through a custom domain name with HTTPS security enabled using SSL/TLS certificates.
+The purpose of the project was to design, configure, secure, and deploy a personal portfolio website hosted on an Ubuntu Linux virtual machine running Nginx.  
 
-The project demonstrates practical experience with:
+The project demonstrates practical cloud computing skills including:
 
-* Cloud virtual machines
-* Linux server administration
-* SSH remote access
-* Nginx web server configuration
-* DNS configuration
-* HTTPS and SSL/TLS implementation
-* Git and GitHub version control
-* Bash scripting
-* Website deployment
+- Linux server administration
+- Remote SSH access
+- Website deployment
+- DNS configuration
+- HTTPS/SSL implementation
+- Bash scripting
+- GitHub version control
+- Cloud infrastructure management
 
----
-
-# Live Website
-
-Website URL:
-
-```text
-https://dimasrodriguez.site
-```
-
-GitHub Repository:
-
-```text
-https://github.com/DimasLeviRodriguez/ict171-cloud-server-project
-```
+The website was developed using HTML and CSS and deployed publicly using a custom domain with HTTPS enabled.
 
 ---
 
 # Technologies Used
 
-* Microsoft Azure
-* Ubuntu Linux 24.04 LTS
-* Nginx Web Server
-* HTML5
-* CSS3
-* Git & GitHub
-* SSH
-* Bash Scripting
-* SSL/TLS
-* DNS Configuration
+- Microsoft Azure
+- Ubuntu Linux 24.04 LTS
+- Nginx Web Server
+- HTML5
+- CSS3
+- Git & GitHub
+- Bash Scripting
+- SSH
+- SSL/TLS Certificates
+- DNS Configuration
 
 ---
 
-# Azure Virtual Machine Setup
+# Live Website
 
-The project was deployed using a Microsoft Azure virtual machine running Ubuntu Linux.
-
-The setup process included:
-
-1. Creating a virtual machine in Microsoft Azure
-2. Configuring a public IP address
-3. Opening required ports in the Network Security Group
-4. Connecting remotely using SSH
-5. Installing and configuring Nginx
-6. Deploying the website files
-7. Configuring a custom DNS domain
-8. Enabling HTTPS using SSL/TLS certificates
+🌐 https://dimasrodriguez.site
 
 ---
 
-# SSH Remote Access
+# GitHub Repository
 
-The server was remotely managed using SSH from a local macOS system.
-
-Example SSH connection command:
-
-```bash
-ssh -i myVm-1_key.pem azureuser@20.11.102.162
-```
-
-SSH allowed remote administration of the Linux server, file management, package installation, and server configuration.
+🔗 https://github.com/DimasLeviRodriguez/ict171-cloud-server-project
 
 ---
 
-# Nginx Web Server Configuration
+# Features Implemented
 
-Nginx was installed and configured to host the portfolio website.
+## Cloud Infrastructure
+- Microsoft Azure virtual machine deployment
+- Ubuntu Linux server configuration
+- Public IP networking
+- DNS setup
 
-Installation commands:
+## Website Hosting
+- Nginx web server installation
+- Portfolio website deployment
+- Public website accessibility
 
-```bash
-sudo apt update
-sudo apt install nginx
-```
+## Security
+- HTTPS enabled using SSL/TLS
+- Secure remote SSH administration
 
-The website files were deployed to:
+## Scripting
+A custom Bash monitoring script was created to display:
+- hostname
+- uptime
+- memory usage
+- disk usage
+- nginx service status
 
-```text
-/var/www/html
-```
-
-Nginx was restarted after deployment:
-
-```bash
-sudo systemctl restart nginx
-```
-
----
-
-# DNS Configuration
-
-A custom domain was connected to the Azure virtual machine using DNS configuration.
-
-The domain used for this project:
-
-```text
-dimasrodriguez.site
-```
-
-DNS records were configured to point the domain to the Azure virtual machine public IP address.
-
----
-
-# SSL/TLS HTTPS Security
-
-HTTPS was enabled using SSL/TLS certificates to secure the website connection.
-
-Certbot was used to generate and install the certificates:
-
-```bash
-sudo certbot --nginx
-```
-
-This provides encrypted communication between the server and website visitors.
-
----
-
-# GitHub Version Control
-
-Git and GitHub were used for version control and project management.
-
-The repository includes:
-
-* Website source code
-* Documentation
-* Screenshots
-* Bash scripts
-* Commit history
-
-Example Git commands used:
-
-```bash
-git init
-git add .
-git commit -m "Initial project structure"
-git push
-```
-
----
-
-# Bash Monitoring Script
-
-A Linux monitoring script was developed to display important server information.
-
-The script displays:
-
-* Hostname
-* Current user
-* Server uptime
-* Disk usage
-* Memory usage
-* Nginx service status
-* Current date and time
-
-The script demonstrates practical Linux scripting and server administration skills.
-
-Example execution:
-
-```bash
-./server-status.sh
-```
-
----
-
-# Education Background
-
-## Murdoch University
-
-Bachelor of Information Technology
-Major: Cybersecurity and Forensics
-Perth, Western Australia
-
-## National Institute of Technology
-
-Diploma of Information Technology
-Front End Web Development
-Completed in 2025
-
-## Oxford School
-
-Bilingual High School Graduate
-Villavicencio, Colombia
-Graduated in 2023
+## Version Control
+- Git repository initialization
+- Multiple commits during development
+- GitHub remote repository integration
 
 ---
 
 # Screenshots
 
-The project includes screenshots demonstrating:
+## Azure Virtual Machine Dashboard
 
-* Azure virtual machine setup
-* SSH server access
-* GitHub repository configuration
-* Website deployment
-* HTTPS functionality
-* Bash script execution
-* Linux server monitoring
+![Azure VM](screenshots/azure-vm-dashboards.png)
 
 ---
 
-# Conclusion
+## SSH Remote Access
 
-This project successfully demonstrated the deployment and management of a cloud-hosted Linux web server using Microsoft Azure.
-
-The project provided practical experience with cloud computing, Linux server administration, web hosting, networking, security configuration, GitHub version control, and Bash scripting.
-
-The completed website acts both as a technical demonstration and as a personal portfolio that can continue to grow throughout future studies and projects.
+![SSH Access](screenshots/ssh-access.png)
 
 ---
 
-# Author
+## HTTPS Enabled Website
 
-Dimas Rodriguez
-Murdoch University
-Bachelor of Information Technology
-Cybersecurity and Forensics Major
+![HTTPS Enabled](screenshots/https-enabled.png)
+
+---
+
+## Portfolio Website
+
+![Portfolio Website](screenshots/portfolio-website.png)
+
+---
+
+## Server Monitoring Script Output
+
+![Script Output](screenshots/script-output.png)
+
+---
+
+## GitHub Commit History
+
+![GitHub Commits](screenshots/github-commits.png)
+
+---
+
+# Bash Monitoring Script
+
+The server monitoring script was created to provide useful system information directly from the Linux server.
+
+The script displays:
+- hostname
+- current user
+- current time
+- uptime
+- disk usage
+- memory usage
+- nginx service status
+
+Example execution:
+
+```bash
+./server-status.sh
