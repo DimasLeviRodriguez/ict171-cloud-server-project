@@ -227,28 +227,6 @@ git push
 
 ---
 
-# Educational Background
-
-## Murdoch University
-
-Bachelor of Information Technology
-Major: Cybersecurity and Forensics
-Perth, Western Australia
-
-## National Institute of Technology
-
-Diploma in Information Technology
-Front End Web Development
-Completed in 2025
-
-## Oxford School
-
-Bilingual High School Graduate
-Villavicencio, Colombia
-Graduated in 2023
-
----
-
 # Skills Demonstrated
 
 This project demonstrates practical skills in:
