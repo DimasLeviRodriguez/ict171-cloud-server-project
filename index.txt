@@ -155,7 +155,7 @@
 
 <section id="about">
 
-  <img src="dimas.jpeg" alt="Dimas Rodriguez" class="profile-image">
+  <img src="dimas.jpg" alt="Dimas Rodriguez" class="profile-image">
 
   <h2>About Me</h2>
 
