@@ -155,7 +155,7 @@
 
 <section id="about">
 
-  <img src="/Users/dimaslevirodriguez/Downloads/B86559AE-03B3-4DFA-9B75-4CC35A403E0B.jpeg" alt="Dimas Rodriguez" class="profile-image">
+  <img src="dimas.jpeg" alt="Dimas Rodriguez" class="profile-image">
 
   <h2>About Me</h2>
 
