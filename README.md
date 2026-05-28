@@ -9,84 +9,68 @@
 
 ---
 
+# Public Server Information
+
+**Website:** https://dimasrodriguez.site
+**Public IP Address:** 20.11.102.162
+**GitHub Repository:** https://github.com/DimasLeviRodriguez/ict171-cloud-server-project
+
+---
+
 # Project Overview
 
-This project focused on creating and deploying a cloud-hosted personal portfolio website using Microsoft Azure and Ubuntu Linux.
+The goal of this project was to deploy and manage a cloud-hosted Linux web server using Infrastructure as a Service (IaaS) on Microsoft Azure.
 
-The website was developed as part of my ICT171 cloud computing project and demonstrates practical skills in Linux server management, web hosting, networking, scripting, and cloud deployment.
+For this project, I created a personal portfolio website hosted on an Ubuntu Linux virtual machine running the Nginx web server. The project was designed to demonstrate practical skills in Linux server administration, cloud computing, networking, scripting, and secure website deployment.
 
-The project involved configuring a Linux virtual machine, installing and managing the Nginx web server, connecting a custom domain name, enabling HTTPS security, and deploying a fully accessible website to the internet.
+The website was manually configured and deployed through SSH remote administration rather than using a preconfigured cloud image or automatic website hosting platform.
 
-Throughout the project, Git and GitHub were used for version control and documentation of development progress.
+GitHub was used throughout the project for version control and project documentation.
 
 ---
 
 # Technologies Used
 
 * Microsoft Azure
-* Ubuntu Linux 24.04
+* Ubuntu Linux 24.04 LTS
 * Nginx Web Server
 * HTML5
 * CSS3
 * Bash Scripting
-* Git and GitHub
+* Git & GitHub
 * SSH
 * DNS Configuration
 * SSL/TLS Certificates
 
 ---
 
-# Live Website
+# Project Objectives
 
-https://dimasrodriguez.site
+The objectives of this project were to:
 
----
-
-# GitHub Repository
-
-https://github.com/DimasLeviRodriguez/ict171-cloud-server-project
-
----
-
-# Project Features
-
-## Cloud Server Deployment
-
-* Azure virtual machine configuration
-* Ubuntu Linux server setup
-* Public IP networking
-* Remote SSH access
-
-## Website Hosting
-
-* Nginx web server installation
-* Portfolio website deployment
-* Public accessibility through custom domain
-
-## Security
-
-* HTTPS enabled with SSL/TLS
-* Secure remote administration using SSH
-
-## Bash Monitoring Script
-
-A custom Linux monitoring script was created to display:
-
-* system uptime
-* hostname
-* memory usage
-* disk usage
-* nginx service status
-
-## Version Control
-
-* Git repository initialization
-* Multiple development commits
-* GitHub remote repository integration
+* Deploy a Linux virtual machine in Microsoft Azure
+* Configure a public web server using Nginx
+* Create and host a personal portfolio website
+* Configure remote SSH administration
+* Link a custom domain name to the server
+* Enable HTTPS using SSL/TLS certificates
+* Develop a Bash monitoring script
+* Document the project using GitHub
 
 ---
 
-# Screenshots
+# Virtual Machine Deployment
+
+A Microsoft Azure virtual machine was created using Ubuntu Linux 24.04 LTS.
+
+The VM was configured with:
+
+* a public IP address
+* inbound SSH access
+* web traffic permissions for HTTP and HTTPS
+* Azure networking configuration
+
+After deployment, the server was accessed remotely from macOS using SSH and a private key.
 
 ## Azure Virtual Machine Dashboard
 
@@ -94,17 +78,67 @@ A custom Linux monitoring script was created to display:
 
 ---
 
-## SSH Remote Access
+# SSH Remote Administration
+
+Remote administration was completed using SSH from the macOS terminal.
+
+The following command was used to connect to the server:
+
+```bash
+ssh -i "myVm-1_key.pem" azureuser@20.11.102.162
+```
+
+Once connected, Linux server configuration and deployment tasks were completed directly through the command line environment.
+
+## SSH Access
 
 ![SSH Access](screenshots/ssh-access.png)
 
 ---
 
-## HTTPS Enabled Website
+# Nginx Web Server Installation
 
-![HTTPS Enabled](screenshots/https-enabled.png)
+The Nginx web server was installed and configured on Ubuntu Linux using the following commands:
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+After installation, the Nginx service was started and enabled:
+
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+The website files were moved into the default web directory:
+
+```bash
+sudo mv index.html /var/www/html/
+```
+
+The Nginx service was then restarted:
+
+```bash
+sudo systemctl restart nginx
+```
 
 ---
+
+# Website Development
+
+The website was developed using HTML and CSS as a personal portfolio page.
+
+The site includes:
+
+* personal introduction
+* educational background
+* technical skills
+* project information
+* contact details
+
+The website was manually styled rather than using a website builder or CMS platform.
 
 ## Portfolio Website
 
@@ -112,11 +146,80 @@ A custom Linux monitoring script was created to display:
 
 ---
 
-## Server Monitoring Script
+# DNS Configuration
+
+A custom domain name was connected to the Azure virtual machine public IP address.
+
+DNS records were configured so the domain would correctly point to the Linux web server hosted in Microsoft Azure.
+
+The website is publicly accessible at:
+
+https://dimasrodriguez.site
+
+---
+
+# HTTPS and SSL/TLS Configuration
+
+HTTPS was enabled to provide secure encrypted communication between the website and users.
+
+SSL/TLS certificates were configured on the Nginx web server to secure the domain and allow HTTPS access.
+
+The secure HTTPS connection can be verified through the browser security lock icon.
+
+## HTTPS Enabled Website
+
+![HTTPS Enabled](screenshots/https-enabled.png)
+
+---
+
+# Bash Monitoring Script
+
+A custom Bash monitoring script named `server-status.sh` was developed as part of the scripting component of the project.
+
+The purpose of the script is to provide useful server information directly from the Linux command line.
+
+The script displays:
+
+* hostname
+* current user
+* uptime
+* disk usage
+* memory usage
+* nginx service status
+
+The script was given executable permissions using:
+
+```bash
+chmod +x server-status.sh
+```
+
+The script was then executed directly from the Linux terminal.
+
+## Script Output
 
 ![Script Output](screenshots/script-output.png)
 
 ---
+
+# GitHub Documentation and Version Control
+
+GitHub was used to document the development process and maintain version control throughout the project.
+
+Multiple commits were created during the development of:
+
+* the website
+* screenshots
+* documentation
+* Bash script
+
+Git commands used during the project included:
+
+```bash
+git init
+git add .
+git commit -m "Initial project structure"
+git push
+```
 
 ## GitHub Commit History
 
@@ -148,23 +251,42 @@ Graduated in 2023
 
 # Skills Demonstrated
 
+This project demonstrates practical skills in:
+
 * Linux server administration
 * Cloud computing
-* Website deployment
-* Web server configuration
-* Git version control
+* Web server deployment
+* Website hosting
 * Bash scripting
 * DNS configuration
 * SSL/TLS implementation
 * Remote server management
-* Front-end web development
+* Git version control
+* HTML and CSS development
+
+---
+
+# References
+
+Microsoft Azure Documentation
+https://learn.microsoft.com/en-us/azure/
+
+Ubuntu Documentation
+https://help.ubuntu.com/
+
+Nginx Documentation
+https://nginx.org/en/docs/
+
+GitHub Documentation
+https://docs.github.com/
 
 ---
 
 # Conclusion
 
-This project provided practical experience with deploying and managing a Linux-based cloud server environment.
+This project provided practical experience in deploying and managing a Linux-based cloud server environment using Microsoft Azure Infrastructure as a Service.
 
-It combined several important areas of IT including networking, security, Linux administration, scripting, and web hosting into a single real-world project.
+The project combined cloud deployment, Linux administration, website hosting, DNS configuration, HTTPS security, scripting, and GitHub documentation into a single real-world implementation.
 
-The final result is a secure portfolio website hosted on Microsoft Azure with HTTPS enabled and managed through remote Linux administration tools.
+The final result is a publicly accessible secure portfolio website hosted on a manually configured Ubuntu Linux server.
+
